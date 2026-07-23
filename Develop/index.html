@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Ocean</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+    <div class="page-container">
+        
+        <div class="header-bar">
+            <nav class="main-nav">
+                <a href="index.html" class="nav-button">Home</a>
+                <a href="about.html" class="nav-button">About</a>
+                <a href="quiz.html" class="nav-button">Contact</a>
+            </nav>
+            <button id="theme-toggle" class="theme-btn">Dark Mode</button>
+        </div>
+
+        <h1>The Ocean</h1>
+        <p>The ocean is a vast and mysterious place, covering more than 70% of the Earth's surface. It is home to a diverse array of marine life and holds many secrets waiting to be discovered.</p>
+
+        <h2>Rubbish in the Ocean</h2>
+        <p>Plastic pollution has become a major threat to marine life, with millions of tons of waste entering the oceans each year. This pollution harms wildlife, disrupts ecosystems, and can even enter the human food chain.</p>
+
+        <div class="image-section">
+            <img src="Sea.jpg" alt="A beautiful view of the sea" class="sea-image">
+        </div>
+
+    </div> 
+<div class="fact-card">
+    <h3>Did You Know?</h3>
+    <p id="fact-display">Click the button below to reveal an interesting ocean fact!</p>
+    <button id="fact-btn" class="fact-button">Reveal Ocean Fact</button>
+</div>
+<div class="quiz-callout">
+    <h3>Ready to test your ocean knowledge?</h3>
+    <a href="quiz.html" class="quiz-link-btn">Take the Ocean Quiz</a>
+</div>
+    <script>
+      const toggleButton = document.getElementById('theme-toggle');
+      
+      toggleButton.addEventListener('click', () => {
+        document.body.classList.toggle('dark-theme');
+        
+        if (document.body.classList.contains('dark-theme')) {
+          toggleButton.textContent = 'Light Mode';
+        } else {
+          toggleButton.textContent = 'Dark Mode';
+        }
+      });
+    </script>
+    <script>
+  const oceanFacts = [
+    "The ocean produces over 50% of the Earth's oxygen, mostly thanks to tiny marine plants called phytoplankton.",
+    "We have better maps of the surface of Mars and the Moon than we do of the Earth's ocean floor!",
+    "The world's largest living structure is the Great Barrier Reef, measuring over 2,300 kilometers long.",
+    "The deepest known point in the ocean is the Challenger Deep, reaching nearly 11,000 meters (36,000 feet) down.",
+    "Around 90% of all volcanic activity on Earth occurs underwater in the oceans.",
+    "The ocean is home to the largest animal on Earth: the blue whale.",
+    "The world's largest waterfall isn't on land—it's underwater beneath the Denmark Strait, dropping cold water nearly 11,500 feet (3,500 meters)",
+    "The ocean is a major source of food for humans, providing fish, shellfish, and other seafood that are essential to diets around the world.",
+  ];
+
+  const factBtn = document.getElementById('fact-btn');
+  const factDisplay = document.getElementById('fact-display');
+
+  factBtn.addEventListener('click', () => {
+    const randomIndex = Math.floor(Math.random() * oceanFacts.length);
+    factDisplay.textContent = oceanFacts[randomIndex];
+    
+    factDisplay.classList.remove('pop-anim');
+    void factDisplay.offsetWidth;
+    factDisplay.classList.add('pop-anim');
+  });
+    </script>
+</html>

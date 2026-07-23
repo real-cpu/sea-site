@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocean Pollution - Our Ocean</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+    <div class="page-container">
+        
+        <div class="header-bar">
+            <nav class="main-nav">
+                <a href="index.html" class="nav-button">Home</a>
+                <a href="about.html" class="nav-button">About</a>
+                <a href="quiz.html" class="nav-button">Contact</a>
+            </nav>
+                <button id="theme-toggle" class="theme-btn">Dark Mode</button>
+        </div>
+
+        <h1>Rubbish in the Ocean</h1>
+        
+        <p>Every year, millions of tons of waste enter our oceans, impacting marine animals, destroying natural coral habitats, and causing microplastic contamination throughout the global food chain.</p>
+
+        <h2>Mind-Boggling Quantities</h2>
+        <p>Around <strong>8 to 11 million metric tons</strong> of plastic enter the ocean every single year. That’s roughly equivalent to dumping a full garbage truck of plastic into the ocean <em>every minute</em>.</p>
+
+        <h2>Where Does It All Come From?</h2>
+        <ul>
+            <li><strong>80% Land-Based:</strong> Comes from land activities including litter, run-off, and mismanaged municipal waste.</li>
+            <li><strong>20% Ocean-Based:</strong> Originates from maritime activities, such as lost or discarded fishing equipment.</li>
+            <li><strong>Hidden Below the Surface:</strong> While floating plastic makes headline news, it is estimated that up to <strong>94%</strong> of ocean plastic eventually sinks to the seafloor, making cleanup extremely difficult.</li>
+        </ul>
+
+        <h2>How Long Does Ocean Rubbish Last?</h2>
+        <p>Click below to inspect how long common everyday trash items take to decompose in the ocean environment.</p>
+
+        <div class="fact-card">
+            <h3 id="item-title">Item Inspector</h3>
+            
+            <img id="inspector-img" src="default-item.jpg" alt="Item Preview" class="inspector-img">
+
+            <p id="fact-display">Click a button below to check an item's breakdown time!</p>
+            
+            <div class="button-group">
+                <button class="fact-button trash-btn" data-time="Plastic Water Bottle: Takes up to 450 YEARS to completely decompose!" data-img="bottle.jpg">Plastic Bottle</button>
+                <button class="fact-button trash-btn" data-time="Aluminum Can: Takes around 200 YEARS to break down in saltwater!" data-img="can.jpg">Aluminum Can</button>
+                <button class="fact-button trash-btn" data-time="Fishing Line: Takes up to 600 YEARS and poses severe entanglement risks!" data-img="fishing-line.jpg">Fishing Line</button>
+                <button class="fact-button trash-btn" data-time="Plastic Bag: Takes 10 to 20 YEARS, but breaks into toxic microplastics!" data-img="plastic-bag.jpg">Plastic Bag</button>
+            </div>
+        </div>
+
+        <h2>Microplastics Everywhere</h2>
+        <p>Plastics don’t truly biodegrade—instead, they photo-degrade and fragment into tiny particles called <strong>microplastics</strong>. Scientists have detected microplastics in every corner of the globe, from Arctic sea ice down to crustaceans living in the deepest parts of the Mariana Trench.</p>
+
+        <h2>The Great Pacific Garbage Patch</h2>
+        <p>Ocean currents gather floating waste into five massive swirling gyres. The largest, the <strong>Great Pacific Garbage Patch</strong>, is located between Hawaii and California. It covers an estimated surface area of 1.6 million square kilometers—an area twice the size of Texas or three times the size of France!</p>
+
+        <div class="image-section">
+            <img src="Rubbish.jpg" alt="Plastic trash in the sea" class="sea-image" id="sea-image">
+        </div>
+
+        <h2>Impact on Marine Life</h2>
+        <p>Over <strong>1 million seabirds</strong> and <strong>100,000 marine mammals and sea turtles</strong> die each year from plastic entanglement or ingestion.</p>
+        <ul>
+            <li><strong>Mistaken Identity:</strong> Sea turtles frequently mistake floating plastic bags for jellyfish, their primary food source.</li>
+            <li><strong>Ghost Gear:</strong> Lost or discarded fishing nets continue to trap and drown marine life unconditionally for decades.</li>
+        </ul>
+
+        <blockquote class="did-you-know">
+            <strong>Did You Know?</strong><br>
+            If current plastic production and waste management trends continue, scientists estimate that by <strong>2050</strong>, the total weight of plastic in the oceans could outweigh all the fish in the sea.
+        </blockquote>
+
+    </div> 
+
+    <div class="quiz-callout">
+        <h3>Ready to test your ocean knowledge?</h3>
+        <a href="quiz.html" class="quiz-link-btn">Take the Ocean Quiz</a>
+    </div>
+
+    <script>
+      const toggleButton = document.getElementById('theme-toggle');
+      const seaImage = document.getElementById('sea-image');
+      
+      toggleButton.addEventListener('click', () => {
+        document.body.classList.toggle('dark-theme');
+        
+        if (document.body.classList.contains('dark-theme')) {
+          toggleButton.textContent = 'Light Mode';
+          seaImage.src = 'Rubbish-Dark.jpg';
+        } else {
+          toggleButton.textContent = 'Dark Mode';
+          seaImage.src = 'Rubbish.jpg';
+        }
+      });
+      const trashButtons = document.querySelectorAll('.trash-btn');
+      const factDisplay = document.getElementById('fact-display');
+      const inspectorImg = document.getElementById('inspector-img');
+
+      trashButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          factDisplay.textContent = button.getAttribute('data-time');
+          inspectorImg.src = button.getAttribute('data-img');
+          
+          factDisplay.classList.remove('pop-anim');
+          inspectorImg.classList.remove('pop-anim');
+          
+          void factDisplay.offsetWidth;
+          
+          factDisplay.classList.add('pop-anim');
+          inspectorImg.classList.add('pop-anim');
+        });
+      });
+    </script>
+</body>
+</html>

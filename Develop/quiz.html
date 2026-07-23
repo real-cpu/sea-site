@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocean Quiz - Our Ocean</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+    <div class="page-container">
+        
+        <div class="header-bar">
+            <nav class="main-nav">
+                <a href="index.html" class="nav-button">Home</a>
+                <a href="about.html" class="nav-button">About</a>
+                <a href="quiz.html" class="nav-button">Quiz</a>
+            </nav>
+            <button id="theme-toggle" class="theme-btn">Dark Mode</button>
+        </div>
+
+        <h1>Ocean Knowledge Quiz</h1>
+        <p>Test your knowledge on the facts and statistics covered on our home and ocean pollution pages!</p>
+
+        <div class="quiz-container" id="quiz-container">
+            
+            <div class="question-card" data-correct="1">
+                <h3>1. How much of the Earth's oxygen is produced by the ocean?</h3>
+                <div class="options-group">
+                    <button class="option-btn" data-index="0">Around 25%</button>
+                    <button class="option-btn" data-index="1">Over 50%</button>
+                    <button class="option-btn" data-index="2">Around 75%</button>
+                    <button class="option-btn" data-index="3">90%</button>
+                </div>
+            </div>
+
+            <div class="question-card" data-correct="2">
+                <h3>2. How long can a plastic fishing line take to break down in the ocean?</h3>
+                <div class="options-group">
+                    <button class="option-btn" data-index="0">10 to 20 years</button>
+                    <button class="option-btn" data-index="1">200 years</button>
+                    <button class="option-btn" data-index="2">Up to 600 years</button>
+                    <button class="option-btn" data-index="3">It never degrades at all</button>
+                </div>
+            </div>
+
+            <div class="question-card" data-correct="0">
+                <h3>3. What percentage of ocean plastic waste comes from land-based activities?</h3>
+                <div class="options-group">
+                    <button class="option-btn" data-index="0">80%</button>
+                    <button class="option-btn" data-index="1">50%</button>
+                    <button class="option-btn" data-index="2">20%</button>
+                    <button class="option-btn" data-index="3">94%</button>
+                </div>
+            </div>
+
+            <div class="question-card" data-correct="3">
+                <h3>4. Where is the deepest known point in the ocean located?</h3>
+                <div class="options-group">
+                    <button class="option-btn" data-index="0">Denmark Strait</button>
+                    <button class="option-btn" data-index="1">Great Barrier Reef</button>
+                    <button class="option-btn" data-index="2">Great Pacific Garbage Patch</button>
+                    <button class="option-btn" data-index="3">Challenger Deep</button>
+                </div>
+            </div>
+
+            <div class="question-card" data-correct="1">
+                <h3>5. By what year could plastic in the ocean outweigh all the fish in the sea if current trends continue?</h3>
+                <div class="options-group">
+                    <button class="option-btn" data-index="0">2030</button>
+                    <button class="option-btn" data-index="1">2050</button>
+                    <button class="option-btn" data-index="2">2080</button>
+                    <button class="option-btn" data-index="3">2100</button>
+                </div>
+            </div>
+            
+            <div class="question-card" data-correct="2">
+                <h3>6. How long does an aluminum can take to break down in ocean saltwater?</h3>
+                <div class="options-group">
+                    <button class="option-btn" data-index="0">10 to 20 years</button>
+                    <button class="option-btn" data-index="1">50 years</button>
+                    <button class="option-btn" data-index="2">Around 200 years</button>
+                    <button class="option-btn" data-index="3">450 years</button>
+                </div>
+            </div>
+
+            <div class="question-card" data-correct="1">
+                <h3>7. Where is the world's largest underwater waterfall located?</h3>
+                <div class="options-group">
+                    <button class="option-btn" data-index="0">Mariana Trench</button>
+                    <button class="option-btn" data-index="1">Denmark Strait</button>
+                    <button class="option-btn" data-index="2">Great Barrier Reef</button>
+                    <button class="option-btn" data-index="3">Hawaii Coast</button>
+                </div>
+            </div>
+
+            <div class="question-card" data-correct="0">
+                <h3>8. What percentage of volcanic activity on Earth occurs underwater in the oceans?</h3>
+                <div class="options-group">
+                    <button class="option-btn" data-index="0">Around 90%</button>
+                    <button class="option-btn" data-index="1">Around 50%</button>
+                    <button class="option-btn" data-index="2">Around 30%</button>
+                    <button class="option-btn" data-index="3">Less than 10%</button>
+                </div>
+            </div>
+
+            <div class="question-card" data-correct="3">
+                <h3>9. How big is the Great Pacific Garbage Patch estimated to be?</h3>
+                <div class="options-group">
+                    <button class="option-btn" data-index="0">The size of a football stadium</button>
+                    <button class="option-btn" data-index="1">Twice the size of Florida</button>
+                    <button class="option-btn" data-index="2">The size of France</button>
+                    <button class="option-btn" data-index="3">Twice the size of Texas or 3 times the size of France</button>
+                </div>
+            </div>
+
+            <div class="question-card" data-correct="1">
+                <h3>10. Why do sea turtles frequently swallow floating plastic bags?</h3>
+                <div class="options-group">
+                    <button class="option-btn" data-index="0">They eat them for moisture</button>
+                    <button class="option-btn" data-index="1">They mistake them for jellyfish</button>
+                    <button class="option-btn" data-index="2">They use them to build nests</button>
+                    <button class="option-btn" data-index="3">They mistake them for seaweed</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="quiz-actions">
+            <button id="submit-btn" class="fact-button" style="font-size: 1.1rem; padding: 12px 24px;">Submit Answers</button>
+        </div>
+
+        <div class="score-board" id="score-board">
+            <h2 id="score-title">Quiz Completed!</h2>
+            <p id="score-text"></p>
+            <button id="reset-btn" class="fact-button">Try Again</button>
+        </div>
+
+    </div> 
+
+    <script>
+    const toggleButton = document.getElementById('theme-toggle');
+    
+    toggleButton.addEventListener('click', () => {
+        document.body.classList.toggle('dark-theme');
+        
+        if (document.body.classList.contains('dark-theme')) {
+            toggleButton.textContent = 'Light Mode';
+        } else {
+            toggleButton.textContent = 'Dark Mode';
+        }
+    });
+
+    const questions = document.querySelectorAll('.question-card');
+    const submitBtn = document.getElementById('submit-btn');
+    const scoreBoard = document.getElementById('score-board');
+    const scoreText = document.getElementById('score-text');
+    const resetBtn = document.getElementById('reset-btn');
+
+    const warningMsg = document.createElement('p');
+    warningMsg.style.color = '#d9534f';
+    warningMsg.style.fontWeight = 'bold';
+    warningMsg.style.marginTop = '10px';
+    warningMsg.style.display = 'none';
+    submitBtn.parentNode.insertBefore(warningMsg, submitBtn);
+
+    questions.forEach(card => {
+        const options = card.querySelectorAll('.option-btn');
+        options.forEach(option => {
+            option.addEventListener('click', () => {
+                
+                card.style.borderColor = '';
+
+                options.forEach(btn => {
+                    btn.classList.remove('selected');
+                    btn.style.borderColor = '';
+                    delete btn.dataset.selected;
+                });
+
+                option.style.borderColor = '#006699';
+                option.dataset.selected = 'true';
+            });
+        });
+    });
+
+    submitBtn.addEventListener('click', () => {
+        let unansweredCount = 0;
+
+        questions.forEach(card => {
+            const hasSelected = card.querySelector('.option-btn[data-selected="true"]');
+            if (!hasSelected) {
+                unansweredCount++;
+              
+                card.style.borderColor = '#ff8080';
+            } else {
+                card.style.borderColor = '';
+            }
+        });
+
+        if (unansweredCount > 0) {
+            warningMsg.textContent = `⚠️ Please answer all questions! You have ${unansweredCount} unanswered question${unansweredCount > 1 ? 's' : ''} left.`;
+            warningMsg.style.display = 'block';
+            
+            const firstUnanswered = Array.from(questions).find(card => card.style.borderColor === 'rgb(255, 128, 128)');
+            if (firstUnanswered) {
+                firstUnanswered.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+            return;
+        }
+
+        warningMsg.style.display = 'none';
+
+        let score = 0;
+        let total = questions.length;
+
+        questions.forEach(card => {
+            const correctIndex = parseInt(card.getAttribute('data-correct'));
+            const options = card.querySelectorAll('.option-btn');
+            
+            options.forEach((option, index) => {
+                option.disabled = true;
+
+                const isSelected = option.dataset.selected === 'true';
+
+                if (index === correctIndex) {
+                    option.classList.add('correct');
+                    if (isSelected) score++;
+                } 
+            
+                else if (isSelected) {
+                    option.classList.add('wrong');
+                }
+            });
+        });
+
+        scoreText.textContent = `You scored ${score} out of ${total}! (${Math.round((score / total) * 100)}%)`;
+        scoreBoard.style.display = 'block';
+        scoreBoard.classList.add('pop-anim');
+        submitBtn.style.display = 'none';
+    });
+
+    resetBtn.addEventListener('click', () => {
+        questions.forEach(card => {
+            card.style.borderColor = '';
+            const options = card.querySelectorAll('.option-btn');
+            options.forEach(option => {
+                option.disabled = false;
+                option.classList.remove('correct', 'wrong');
+                option.style.borderColor = '';
+                delete option.dataset.selected;
+            });
+        });
+
+        warningMsg.style.display = 'none';
+        scoreBoard.style.display = 'none';
+        submitBtn.style.display = 'inline-block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
+</body>
+</html>
